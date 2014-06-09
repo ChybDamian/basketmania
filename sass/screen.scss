@@ -6,19 +6,23 @@
 @import "compass/reset";
 
 $main-color: #f2f2f2;
+$main-background-color: darken( red, 20% );
 
 #navTop{
-    height: 50px;
+    height: 55px;
     width: 100%;
     display:block;
-    background-color: darken( red, 20% );
+    background-color: $main-background-color;
     color: white;
-    line-height: 50px;
     font-size: 25px;
     text-align: center;
     position: fixed;	
     z-index:9;
     color: $main-color;
+}
+
+.test{
+    background-color: grey;
 }
 
 #navigation{
@@ -30,3 +34,32 @@ $main-color: #f2f2f2;
     font-size: 100px;
     color: $main-color;
 }
+
+a{
+    color: $main-color;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+a:hover{
+    color: darken($main-color, 20%);   
+}    
+
+.powitanie{
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    margin: 5px; 
+}
+
+.navbox{
+    height: 55px;
+    background-color: darken( $main-background-color, 2% );
+    
+}
+
+.navbox:hover{
+    background-color: darken( $main-background-color, 5% );
+}
+
+
