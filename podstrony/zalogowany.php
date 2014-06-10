@@ -26,13 +26,28 @@
 
                         <div class="col-md-3 col-md-offset-1">                            
                             <div class="powitanie">
-                                <p><?php echo  "Witaj, " . $_SESSION['user_login'] ?></p>
-                                <a href="#">Wyloguj</a>
+                                <p><?php echo  "Witaj, " . $_SESSION['login_login'] ?></p>
+                                <a href="http://localhost/basketmania/php/wyloguj.php">Wyloguj</a>
                                 <a href="#">O mnie</a>
                             </div>                    
                         </div>
                     </div>
                 </nav>
+            </div>
+        </div>
+        <div class="row top_margin">
+            <div class="col-md-offset-1 col-md-3 user_info">
+                <img class="avatar" src="http://localhost/basketmania/img/avatar.png" alt="avatar">
+                <form action="http://localhost/php/uplad_img.php" method="POST">                    
+                    <input type="file">
+                    <input type="submit" value="dodaj zdjęcie">
+                </form>
+                
+                <p class="imie">Imie: <?php echo $_SESSION['login_firstname'] ?></p>
+                <p class="nazwisko">Nazwisko: <?php echo $_SESSION['login_lastname'] ?></p>
+            </div>
+            <div class="col-md-offset-1 col-md-6 team">
+                
             </div>
         </div>        
         

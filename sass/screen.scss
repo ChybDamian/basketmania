@@ -62,4 +62,31 @@ a:hover{
     background-color: darken( $main-background-color, 5% );
 }
 
+.user_page_1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.top_margin{
+    margin-top: 100px;   
+}
+
+.user_info{
+    border: 1px solid black;
+    height: 500px;
+}
+
+.team{
+    border: 1px solid black;   
+    height: 500px;
+}
+
+.avatar{
+    width: 80%;
+    margin: 10%;
+    border: 1px solid black;
+}
+
 
