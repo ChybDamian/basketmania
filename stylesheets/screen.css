@@ -83,34 +83,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 24, ../sass/screen.scss */
 .test {
-  background-color: grey;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 #navigation {
   z-index: 9;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .section {
   text-align: center;
   font-size: 100px;
   color: #f2f2f2;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 0.7em;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 a:hover {
   color: #bfbfbf;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .powitanie {
   margin: 0;
   padding: 0;
@@ -118,18 +120,18 @@ a:hover {
   margin: 5px;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 .navbox {
   height: 55px;
   background-color: #8f0000;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .navbox:hover {
   background-color: maroon;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .user_page_1 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -137,26 +139,41 @@ a:hover {
   border: 1px solid black;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .top_margin {
   margin-top: 100px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .user_info {
   border: 1px solid black;
   height: 500px;
 }
 
-/* line 81, ../sass/screen.scss */
-.team {
-  border: 1px solid black;
-  height: 500px;
+/* line 83, ../sass/screen.scss */
+#teams {
+  height: 300px;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
+.team {
+  border: 1px solid black;
+  height: 50px;
+}
+/* line 91, ../sass/screen.scss */
+.team img {
+  widht: 40px;
+  height: 40px;
+}
+
+/* line 97, ../sass/screen.scss */
 .avatar {
   width: 80%;
   margin: 10%;
   border: 1px solid black;
+}
+
+/* line 103, ../sass/screen.scss */
+.hidden {
+  visibility: hiden;
 }

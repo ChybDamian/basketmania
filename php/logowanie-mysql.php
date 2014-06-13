@@ -8,7 +8,7 @@
     
     mysql_select_db(DBNAME) or die('Nie udalo sie wybrac bazy danych:  '. mysql_error());
     
-    echo "logowanie-mysql -- success </br></br>";
+   // echo "logowanie-mysql -- success </br></br>";
     
   //  mysqli_close($db);
     

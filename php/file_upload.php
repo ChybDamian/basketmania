@@ -46,7 +46,7 @@
             //
             echo count($uploaded_files) . "<br/><br/>";
             header("Location: http://localhost/basketmania/podstrony/zalogowany.php");
-            //
+        
         }else{
             //dodawanie zdjęć do galerii ( zdjęcia będą w tym samym folderze ale numerowane, zdjęcia nazwane innaczej niż 0.* będą lecialy do galerii usera
             $_FILES['file']['name'] =  count($uploaded_files) . "." . $extension;
