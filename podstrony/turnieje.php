@@ -16,6 +16,23 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="http://localhost/basketmania/stylesheets/screen.css">
+    
+    <script>    
+        $(document).ready(function(){
+            $("#btnJoin").click(function(){                               
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost/basketmania/php/dodajDruzyneDoturnieju.php<?php echo "?turniej=$nazwaTurnieju"?>",
+                    beforeSend: function(){
+                        //$('#listaZesplow').html("loading");
+                    },
+                    success: function(data){                                
+                        $('#listaZesplow p').append(data);        
+                    }
+                 })                                    
+            });                   
+        });
+    </script>            
 </head>
 <body>
      <div class="container-flux">
@@ -40,35 +57,34 @@
             </div>
         </div>
     
-
-
         <div class="row top_margin">
-            <div class="col-md-offset-1 col-md-10 listaZespolow">
+            <div id="listaZesplow" class="col-md-offset-1 col-md-10 listaZespolow">
+                
                 <p><strong style="font-weight: bold;">Zespoly biorące udzial:</strong>
                 <?php
                     $tabelaTurnieju = 'turniej_'.$nazwaTurnieju.'_zespoly';
                     $query = "SELECT team_info.tmi_name FROM $tabelaTurnieju JOIN team_info ON $tabelaTurnieju.teamid = team_info.tmi_teamid";
                     $result = mysql_query($query) or die( "sql1: " . mysql_error());
-
+                    
                     while( $row = mysql_fetch_row($result)){
                         foreach( $row as $key => $value ){
                             echo "$value ";
                         }
-                    }
-                
-                ?> 
-                </p>       
+                    }                                                                        
+                ?>                                      
+                </p> 
+                <button id="btnJoin" class="btn btn-primary">Dolącz</button>      
             </div>        
         </div>
         
         <div class="row top_margin">
             <div class="col-md-offset-1 col-md-10">
-                <table class="table table-striped table-condensed">
+                <table class="table table-striped table-condensed hidden">
                     <thead>
                         <tr>
                             <th>Mecze</th>
                             <th colspan="2">Druzyny</th>                        
-                            <th colspan="2">Wynik</th>
+                            <th colspan="2">Wyniki</th>
                             <th>Data</th>
                         </tr>    
                     </thead>
@@ -106,7 +122,12 @@
                 </table>
             </div>
         </div>
+        <?php
+            if( 1 ) // Ma być widoczne tylko dla administratowa
+                echo "<button class=\"btn btn-primary\" style=\"margin-left: 80px;\">Inicjalizacja</button>";
+        ?>
     </div>
+    
     
 </body>
 </html>

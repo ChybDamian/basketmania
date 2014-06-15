@@ -30,7 +30,7 @@
                 && in_array($extension, $allowedExts)
             ){
                 // TWORZENIE RECORDU TEAMU
-                $query = "INSERT INTO team_info VALUES(NULL,\"$_POST[nazwa]\")";
+                $query = "INSERT INTO team_info VALUES(NULL,\"$_POST[nazwa]\",\"$_SESSION[login_id]\")";
                 $result = mysql_query($query) or die("sql2: " . mysql_error);             
                 //TWORZENIE FOLDERU TEAMU ( NA ZDJECIA -- są one przechowywane w folderze o nazwie id teamu w bazie danych )
                 $query = "SELECT tmi_teamid FROM team_info WHERE tmi_name = \"$_POST[nazwa]\"";

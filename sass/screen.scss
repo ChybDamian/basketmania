@@ -4,21 +4,24 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass";
 
 $main-color: #f2f2f2;
 $main-background-color: darken( red, 20% );
 
 #navTop{
-    height: 55px;
+    padding-top: 15px;
+    height: 48px;
     width: 100%;
     display:block;
-    background-color: $main-background-color;
+    @include background-image(linear-gradient(top, darken(red,10%), $main-background-color)); 
     color: white;
     font-size: 25px;
     text-align: center;
     position: fixed;	
     z-index:9;
     color: $main-color;
+    margin-top: -100px;
 }
 
 .test{
@@ -104,4 +107,117 @@ a:hover{
     visibility: hiden;
 }
 
+.login{
+    width: 60%;
+    height: 20%;
+    margin: 0 auto;
+}
 
+.button_main{
+    display: block;
+    margin: 2%;
+    padding: 10px;    
+    width: 40%;
+    height: 100%;
+    font-size: 40%;
+    border: 3px outset black;
+    float: left;
+    font-family: fantasy;
+    line-height: 120px;
+    //@include background-image(radial-gradient(10px 10px, cyan 30px, dodgerblue 60px));
+    @include background-image(linear-gradient(top, darken(cyan, 8%), dodgerblue));
+     
+}
+
+#section1{
+    @include background-image(linear-gradient(top, #4bbfc3, #636F8F));
+}
+
+.button_loginSmall{   
+    padding: 10px;
+    font-family: fantasy;
+    margin: 10px;
+    @include background-image(linear-gradient(top, darken(cyan, 8%), dodgerblue));
+}
+
+#logo{
+    width: 100px;   
+    position: absolute;
+    left: 20px;
+}
+
+#hoop{
+    float: right;
+    width: 330px;    
+    margin-top: 40px;    
+}
+
+#player{
+    margin-top: 150px;
+    position: absolute;
+    left: -200px;
+    
+}
+
+.boxContainer{
+    margin: 10%;
+    width: 40%;
+    height: 80%;
+    color: black;
+    float: left;    
+
+
+    // lista na sekcji 2
+
+    * {margin: 0; padding: 0;}
+    
+    #listEl1{
+         @include background-image(linear-gradient(top, #1695A3, #ACF0F2));
+    }
+    
+    #listEl2{
+         @include background-image(linear-gradient(top, #ACF0F2, #F3FFE2));
+    }
+    
+    #listEl3{
+         @include background-image(linear-gradient(top, #F3FFE2, #EB7F00));
+    }
+    
+    ul {
+      list-style-type: none;
+      width: 500px;
+    }
+
+    h3 {
+      font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+    }
+    
+    li{
+        margin : 10px 0;
+        margin-left: -30px;
+        opacity: 0;
+    }
+
+    li img {
+      float: left;
+      margin: 0 15px 0 0;
+      width: 150px;
+      height: 150px;
+    }
+
+    li p {
+      font: 200 12px/1.5 Georgia, Times New Roman, serif;
+    }
+
+    li {
+      padding: 10px;
+      overflow: auto;
+    }
+
+    li:hover {
+      background: #eee;
+      cursor: pointer;
+
+    }
+    
+}
