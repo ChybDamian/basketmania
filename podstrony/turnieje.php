@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://localhost/basketmania/stylesheets/screen.css">
+    <link rel="stylesheet" href="/basketmania/stylesheets/screen.css">
     
     <script>    
         $(document).ready(function(){
             $("#btnJoin").click(function(){                               
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost/basketmania/php/dodajDruzyneDoturnieju.php<?php echo "?turniej=$nazwaTurnieju"?>",
+                    url: "/basketmania/php/dodajDruzyneDoturnieju.php<?php echo "?turniej=$nazwaTurnieju"?>",
                     beforeSend: function(){
                         //$('#listaZesplow').html("loading");
                     },
@@ -44,13 +44,16 @@
                         <div class="navbox col-md-2"><a href="/basketmania/podstrony/galeria.php">Galeria</a></div>
                         <div class="navbox col-md-2"><a href="/basketmania/podstrony/turnieje.php">Turnieje</a></div>
                         <div class="navbox col-md-2">x</div>                        
-
-                        <div class="col-md-3 col-md-offset-1">                            
-                            <div class="powitanie">
-                                <p><?php echo  "Witaj, " . $_SESSION['login_login'] ?></p>
-                                <a href="http://localhost/basketmania/php/wyloguj.php">Wyloguj</a>
-                                <a href="#">O mnie</a>
-                            </div>                    
+                        
+                        
+                        <div class="col-md-4 sideGradient">
+                            <div class="row">
+                                <div class="powitanie">
+                                    <p><?php echo  "Witaj, " . $_SESSION['login_login'] ?></p>
+                                    <a href="/basketmania/php/wyloguj.php">Wyloguj</a>
+                                    <a href="#">O mnie</a>
+                                </div>                    
+                            </div>                            
                         </div>
                     </div>
                 </nav>

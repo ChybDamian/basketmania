@@ -27,7 +27,7 @@
 
                 
                 echo "<br/><br/> logowanie-basketmania -- success <br/>";
-                header("Location: http://localhost/basketmania/podstrony/zalogowany.php");
+                header("Location: /basketmania/podstrony/zalogowany.php");
 
             }elseif( $affected_rows > 1 ){
                 echo "Cos mi tutaj smierdzi!<br/>";

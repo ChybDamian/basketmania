@@ -62,6 +62,8 @@ $(document).ready(function() {
     $('#plax-sphere-2').plaxify({"xRange":15,"yRange":15})
     $('#plax-sphere-3').plaxify({"xRange":60,"yRange":60,"invert":true})
     $.plax.enable();
+    
+    
 });
 
 

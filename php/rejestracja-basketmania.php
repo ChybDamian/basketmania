@@ -52,8 +52,9 @@
     // Egzekucja
     if( dataSent() && validate() ){
         
-        @$query = "INSERT INTO login VALUES (NULL, '$_POST[login]', '$_POST[pass]', '$_POST[email]', '$_POST[imie]', '$_POST[nazwisko]', '$_POST[plec]', '$_POST[dataUr]' )";
-         
+        @$query = "INSERT INTO login(`login_id`, `login_login`, `login_password`, `login_email`, `login_firstname`, `login_lastname`, `login_sex`, `login_dataur`) VALUES (NULL, '$_POST[login]', '$_POST[pass]', '$_POST[email]', '$_POST[imie]', '$_POST[nazwisko]', '$_POST[plec]', '$_POST[dataUr]' )";
+        
+       //  echo $query . "<br/>"; 
         $result = mysql_query($query) || die( mysql_error() );    
          
     }else{

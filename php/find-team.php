@@ -3,7 +3,7 @@
     include("logowanie-mysql.php");
     
     
-    $query = "SELECT tmi_name,tmi_teamid FROM team_info ORDER BY tmi_name LIMIT 10";
+    $query = "SELECT tmi_name,tmi_teamid FROM team_info ORDER BY tmi_name LIMIT 20";
     $result = mysql_query($query) or die( mysql_error() );
     
     while( $row = mysql_fetch_row($result) ){
@@ -18,9 +18,9 @@
             $name = end(explode("/",$name[0]));
 //          echo $name . "<br/>";
             
-            echo "http://localhost/basketmania/team_img/$row[1]/$name,";  
+            echo "/basketmania/team_img/$row[1]/$name,";  
         }else{
-            echo "http://localhost/basketmania/img/avatar.png,";
+            echo "/basketmania/img/avatar.png,";
         }    
     }
     

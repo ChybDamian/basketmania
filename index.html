@@ -8,16 +8,15 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <!-- This following line is needed in case of using the default easing option or when using another
-     one rather than "linear" or "swing". You can also add the full jQuery UI instead of this file if you prefer -->
     <script src="fullPage(plugin)/vendors/jquery.easings.min.js"></script>   
-    <!-- This following line needed in the case of setting the plugin option `scrollOverflow` to `true` -->
     <script type="text/javascript" src="fullPage(plugin)/vendors/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="fullPage(plugin)/jquery.fullPage.js"></script>    
     
     <link rel="stylesheet" href="stylesheets/screen.css">
 
-    
+   
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
     
     <script src="scripts/plax.js"></script>
     <script src="scripts/script.js"></script>
@@ -27,22 +26,23 @@
         display: block;
         position: relative;
         margin: 10px auto;
-        width: 318px;
-        height: 318px;
+        width: 400px;
+        height: 400px;
+        
       }
       div#shell{
         z-index: 1;
       }
       img#plax-logo {
         position: absolute;
-        top: 125px;
+        top: 140px;
         left: 90px;
         z-index: 3;
       }
       img#plax-sphere-1 {
         position: absolute;
         z-index: 4;
-        top: 189px;
+        top: 220px;
         left: 191px;
       }
       img#plax-sphere-2 {
@@ -56,29 +56,30 @@
         top: 35px;
         left: 32px;
         z-index: 1;
-      }    
+      }  
+
     </style>
 </head>
 <body>
-    <nav id="navTop">
+    <nav id="navTop" class="hiddenTop">
         <img id="logo" src="img/plax_logo.png" alt="">
-        <a class="button_loginSmall" href="http://localhost/basketmania/podstrony/logowanie.php">Logowanie</a>
-        <a class="button_loginSmall" href="http://localhost/basketmania/podstrony/rejestracja.php">Rejestracja</a>
+        <a class="button_loginSmall" href="/basketmania/podstrony/logowanie.php">Logowanie</a>
+        <a class="button_loginSmall" href="/basketmania/podstrony/rejestracja.php">Rejestracja</a>
     </nav>    
     <div id="fullpage">
         <div id="section1" class="section">            
             <div class="slide">
 
                 <div id="shell">
-                  <img src="img/plax_logo.png" width="136" height="70" id="plax-logo"/>
-                  <img src="img/plax_sphere_small.png" width="93" height="92" id="plax-sphere-1"/>
-                  <img src="img/plax_sphere_large.png" width="215" height="215" id="plax-sphere-2"/>
-                  <img src="img/plax_sphere_small.png" width="93" height="92" id="plax-sphere-3"/>
+                  <img src="img/plax_logo1.png" width="225" height="95" id="plax-logo"/>
+                  <img src="img/plax_sphere_small3.png" width="140" height="140" id="plax-sphere-1"/>
+                  <img src="img/plax_sphere_large3.png" width="300" height="300" id="plax-sphere-2"/>
+                  <img src="img/plax_sphere_small3.png" width="140" height="140" id="plax-sphere-3"/>
                 </div>
 
                 <div class="login">
-                    <a class="button_main" href="http://localhost/basketmania/podstrony/logowanie.php">Zaloguj się</a>
-                    <a class="button_main" href="http://localhost/basketmania/podstrony/rejestracja.php">Dolącz do nas</a>
+                    <a class="button_main" href="/basketmania/podstrony/logowanie.php">Zaloguj się</a>
+                    <a class="button_main" href="/basketmania/podstrony/rejestracja.php">Dolącz do nas</a>
                 </div>                    
 
             </div>
@@ -87,38 +88,37 @@
             </div>
             <div class="slide">
                slide3
-            </div>
-            <div class="slide"> Slide 4 </div>
+            </div>           
         </div>
         <div class="section">
             <div class="boxContainer">                
               <ul>
                 <li id="listEl1">
-                  <img src="img/druzyna.jpg">
+                  <img src="/basketmania/img/druzyna.jpg">
                   <h3>Zaloz swoj zespol</h3>
                   <p></p>
                 </li>
 
                 <li id="listEl2">
-                  <img src="img/trening2.jpg">
+                  <img src="/basketmania/img/trening2.jpg">
                   <h3>Trenuj z najlepszymi</h3>
                   <p>Spelnij swoje marzenia.</p>
                 </li>
 
                 <li id="listEl3">
-                  <img src="img/wygrywaj.png">
+                  <img src="/basketmania/img/wygrywaj.png">
                   <h3>Wygrywaj turnieje</h3>
                   <p>Osiągnij mistrzostwo</p>
                 </li>
               </ul>                
             </div>
-            <img id="hoop" src="img/hoop.png" alt="">
-            <img id="player" src="img/player.png" alt="">
+            <img id="hoop" src="/basketmania/img/hoop.png" alt="">
+            <img id="player" src="/basketmania/img/player.png" alt="">
         </div>
-        <div class="section">
-            <h2>Znajdź najbliższy orlik</h2>
+        <div id="sectionMap" class="section">
+            <h2 id="mapTitle">Znajdź najbliższy orlik</h2>
+            <div id="map_canvas"></div>            
         </div>
     </div>
-        
 </body>
 </html>

@@ -1,15 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html class="login_gradient" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Logowanie</title>
+    <title>Logowanie</title>            
+    <link rel="stylesheet" href="/basketmania/stylesheets/screen.css">
 </head>
 <body>
-    
-    <form action="http://localhost/basketmania/php/logowanie-basketmania.php" method="POST">
-        <p>Login: <input type="text" name="login"></p>
-        <p>Haslo: <input type="text" name="pass"></p>
-        <input type="submit">
-    </form>
+    <div>
+        
+       <form  action="/basketmania/php/logowanie-basketmania.php" method="post" class="dark-matter">
+            <h1>Logowanie</h1>
+            <label for="login">
+                <span>Login :</span>
+                <input id="login" type="text" name="login"/>
+            </label>
+
+            <label for="pass">
+                <span>Haslo :</span>
+                <input id="pass" type="password" name="pass"/>
+            </label>
+             <label>
+                <span>&nbsp;</span>
+                <input type="submit" class="button" value="Zaloguj" />
+            </label>    
+        </form>
+    </div>
 </body>
 </html>
